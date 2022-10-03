@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>紫曦</title>
+  
+  <subtitle>心中有梦 不负韶华</subtitle>
+  <link href="https://socropio.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://socropio.github.io/"/>
+  <updated>2022-10-03T14:36:52.725Z</updated>
+  <id>https://socropio.github.io/</id>
+  
+  <author>
+    <name>ZiXi</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html</title>
+    <link href="https://socropio.github.io/2022/10/03/html/"/>
+    <id>https://socropio.github.io/2022/10/03/html/</id>
+    <published>2022-10-03T14:27:16.000Z</published>
+    <updated>2022-10-03T14:36:52.725Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;网站搭建&quot;&gt;&lt;a href=&quot;#网站搭建&quot; class=&quot;headerlink&quot; title=&quot;网站搭建&quot;&gt;&lt;/a&gt;网站搭建&lt;/h1&gt;&lt;h2 id=&quot;安装的编辑软件&quot;&gt;&lt;a href=&quot;#安装的编辑软件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="web" scheme="https://socropio.github.io/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://socropio.github.io/2022/10/03/hello-world/"/>
+    <id>https://socropio.github.io/2022/10/03/hello-world/</id>
+    <published>2022-10-03T12:09:29.178Z</published>
+    <updated>2022-10-03T12:09:29.178Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
