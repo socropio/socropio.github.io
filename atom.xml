@@ -6,7 +6,7 @@
   <link href="https://socropio.github.io/atom.xml" rel="self"/>
   
   <link href="https://socropio.github.io/"/>
-  <updated>2022-10-03T14:36:52.725Z</updated>
+  <updated>2022-10-03T14:44:14.639Z</updated>
   <id>https://socropio.github.io/</id>
   
   <author>
@@ -21,42 +21,18 @@
     <link href="https://socropio.github.io/2022/10/03/html/"/>
     <id>https://socropio.github.io/2022/10/03/html/</id>
     <published>2022-10-03T14:27:16.000Z</published>
-    <updated>2022-10-03T14:36:52.725Z</updated>
+    <updated>2022-10-03T14:44:14.639Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;网站搭建&quot;&gt;&lt;a href=&quot;#网站搭建&quot; class=&quot;headerlink&quot; title=&quot;网站搭建&quot;&gt;&lt;/a&gt;网站搭建&lt;/h1&gt;&lt;h2 id=&quot;安装的编辑软件&quot;&gt;&lt;a href=&quot;#安装的编辑软件&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;网站搭建&quot;&gt;&lt;a href=&quot;#网站搭建&quot; class=&quot;headerlink&quot; title=&quot;网站搭建&quot;&gt;&lt;/a&gt;网站搭建&lt;/h1&gt;&lt;h2 id=&quot;安装的编辑软件&quot;&gt;&lt;a href=&quot;#安装的编辑软件&quot; class=&quot;headerlink&quot; title=&quot;安装的编辑软件&quot;&gt;&lt;/a&gt;安装的编辑软件&lt;/h2&gt;&lt;h3 id=&quot;三级标题&quot;&gt;&lt;a href=&quot;#三级标题&quot; class=&quot;headerlink&quot; title=&quot;三级标题&quot;&gt;&lt;/a&gt;三级标题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;横杠加空格是个点&lt;br&gt;个人建议在国内的网站上下载&lt;/li&gt;
+&lt;li&gt;vscode&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
     
     <category term="web" scheme="https://socropio.github.io/tags/web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://socropio.github.io/2022/10/03/hello-world/"/>
-    <id>https://socropio.github.io/2022/10/03/hello-world/</id>
-    <published>2022-10-03T12:09:29.178Z</published>
-    <updated>2022-10-03T12:09:29.178Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
