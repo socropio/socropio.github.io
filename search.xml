@@ -1,58 +1,463 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
+<search>
+  <entry>
+    <title>Git</title>
+    <url>/2022/10/05/Git/</url>
+    <content><![CDATA[<h2 id="1-推送到远程仓库"><a href="#1-推送到远程仓库" class="headerlink" title="1.推送到远程仓库"></a>1.推送到远程仓库</h2><p>  git  push  仓库地址  分支名称</p>
+<h2 id="2-拉取远程仓库代码"><a href="#2-拉取远程仓库代码" class="headerlink" title="2.拉取远程仓库代码"></a>2.拉取远程仓库代码</h2><p>git  pull</p>
+<span id="more"></span>
+
+<h2 id="3-代码还没有写完-需要处理其他的bug（用于查看在你上次提交之后是否有对文件再次进行修改）"><a href="#3-代码还没有写完-需要处理其他的bug（用于查看在你上次提交之后是否有对文件再次进行修改）" class="headerlink" title="3.代码还没有写完  需要处理其他的bug（用于查看在你上次提交之后是否有对文件再次进行修改）"></a>3.代码还没有写完  需要处理其他的bug（用于查看在你上次提交之后是否有对文件再次进行修改）</h2><p>  git  status</p>
+<h2 id="4-创建分支"><a href="#4-创建分支" class="headerlink" title="4.创建分支"></a>4.创建分支</h2><p>  git  branch  分支名称</p>
+<h2 id="5-切换分支"><a href="#5-切换分支" class="headerlink" title="5.切换分支"></a>5.切换分支</h2><p>  git  checkout  分支名称</p>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>html</title>
+    <url>/2022/10/03/html/</url>
+    <content><![CDATA[<h1 id="HTML5新特性"><a href="#HTML5新特性" class="headerlink" title="HTML5新特性"></a>HTML5新特性</h1><pre><code>1.html5语义化概念
+  html5语义化指的是合理使用语义化的标签来创建页面结构
+
+2.语义化标签
+  header main footer nav aside
   
+3.语义化优点
+  代码结构清晰；利于开发与维护
+</code></pre>
+<h1 id="css选择器和优先级"><a href="#css选择器和优先级" class="headerlink" title="css选择器和优先级"></a>css选择器和优先级</h1><pre><code>1.css选择器
+  id选择器  类选择器  标签选择器  属性选择器  伪类选择器
   
-    
-    <entry>
-      <title>Git</title>
-      <link href="/2022/10/05/Git/"/>
-      <url>/2022/10/05/Git/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-推送到远程仓库"><a href="#1-推送到远程仓库" class="headerlink" title="1.推送到远程仓库"></a>1.推送到远程仓库</h2><p>  git  push  仓库地址  分支名称</p><h2 id="2-拉取远程仓库代码"><a href="#2-拉取远程仓库代码" class="headerlink" title="2.拉取远程仓库代码"></a>2.拉取远程仓库代码</h2><p>git  pull</p><span id="more"></span><h2 id="3-代码还没有写完-需要处理其他的bug（用于查看在你上次提交之后是否有对文件再次进行修改）"><a href="#3-代码还没有写完-需要处理其他的bug（用于查看在你上次提交之后是否有对文件再次进行修改）" class="headerlink" title="3.代码还没有写完  需要处理其他的bug（用于查看在你上次提交之后是否有对文件再次进行修改）"></a>3.代码还没有写完  需要处理其他的bug（用于查看在你上次提交之后是否有对文件再次进行修改）</h2><p>  git  status</p><h2 id="4-创建分支"><a href="#4-创建分支" class="headerlink" title="4.创建分支"></a>4.创建分支</h2><p>  git  branch  分支名称</p><h2 id="5-切换分支"><a href="#5-切换分支" class="headerlink" title="5.切换分支"></a>5.切换分支</h2><p>  git  checkout  分支名称</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>笔记</title>
-      <link href="/2022/10/05/%E7%AC%94%E8%AE%B0/"/>
-      <url>/2022/10/05/%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<h2 id="数组遍历方法"><a href="#数组遍历方法" class="headerlink" title="数组遍历方法"></a>数组遍历方法</h2><p>1.every()<br>  作用：用于检测数组所有元素是否都符合指定条件<br>  返回值：都符合返回true，否则返回false</p><p>2.forEach()<br>  作用：调用数组的每个元素，并将元素传递给回调函数<br>  注意：对于空数组不执行回调函数</p><span id="more"></span><pre class=" language-jsp"><code class="language-jsp">3.map()  作用：按照原始数组元素顺序依次处理元素  返回值：返回新数组，新数组中的元素为原始数组元素处理后的元素  注意：不会对空数组进行检测；不会改变原始数组4.reduce()  作用：累加器！遍历数组的每一项，接收两个参数       第一个参数：每次遍历都会调用的函数，接收四个参数（前一个值，当前项，项目的索引，数组对象），函数的返回值回传给下一次遍历时，执行这个方法的第一个采纳数       第二个参数：归并基础的初始值  arr.reduce((prevent,item,index,arr)=>&#123;&#125;,0)5.some()  作用：检测数组中的元素是否满足指定条件。会依次执行数组的每个元素，如果有一个元素满足条件，返回true，剩下的不会执行。没有满足的元素，返回false  注意：不会对空数组进行检测，不会改变原始数组6.filter()  作用：遍历数组，过滤出符合条件的元素  返回值：返回新数组，将满足条件的元素放入新数组中。没有符合条件的元素，返回空数组  注意：不会对空数组进行过滤，不会改变原始数组7.findIndex()  作用：返回符合条件的数组中第一个元素的索引8.find()  作用：返回第一个满足条件的元素，如果没有满足条件的元素，返回undefined</code></pre><h2 id="数组操作方法"><a href="#数组操作方法" class="headerlink" title="数组操作方法"></a>数组操作方法</h2><h3 id="改变原数组"><a href="#改变原数组" class="headerlink" title="改变原数组"></a>改变原数组</h3><pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  作用：向数组的末尾添加一个或多个元素  返回新的长度<span class="token number">2</span><span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  作用：删除一个数组中的最后一个元素  返回这个元素<span class="token number">3</span><span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  作用：删除数组的第一个元素  返回这个元素<span class="token number">4</span><span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  作用：向数组的开头添加一个或多个元素  返回新的长度<span class="token number">5</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  作用：颠倒数组中元素的顺序<span class="token number">6</span><span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  作用：向<span class="token operator">/</span>从数组中添加<span class="token operator">/</span>删除项目  返回值：如果有元素被删除，返回包含删除项目的新数组  语法：array<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span>howmany<span class="token punctuation">,</span>item1<span class="token punctuation">,</span><span class="token operator">...</span>itemX<span class="token punctuation">)</span>       index<span class="token punctuation">:</span>必须，整数，规定添加<span class="token operator">/</span>删除项目的位置，负数从数组结尾处规定位置       howmany<span class="token punctuation">:</span>可选，要删除的项目数量       item1<span class="token operator">...</span><span class="token punctuation">:</span>可选，向数组添加的新项目       <span class="token number">7</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  作用：数组排序  返回这个数组</code></pre><h3 id="不改变原数组"><a href="#不改变原数组" class="headerlink" title="不改变原数组"></a>不改变原数组</h3><pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  作用：浅拷贝数组的元素  定义：方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象  浅拷贝，元素是简单数据类型，改变之后不会相互干扰<span class="token number">2</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  作用：数组转字符串  把数组中的所有元素通过指定的分隔符进行分隔放入一个字符串，返回生成的字符串  默认以逗号进行分隔<span class="token number">3</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  作用：用户合并两个或多个数组  返回一个新数组<span class="token number">4</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  作用：查找数组是否存在某个元素，返回下标，不存在返回<span class="token operator">-</span><span class="token number">1</span>  是全等</code></pre><h2 id="vue的生命周期"><a href="#vue的生命周期" class="headerlink" title="vue的生命周期"></a>vue的生命周期</h2><pre class=" language-js"><code class="language-js">生命周期：用来描述一个组件从创建到销毁的全过程beforecreate  初始化createdvue实例从创建到编译模板执行了这两个初始化钩子函数created能获取data，不能获取真实dombeforemounted  挂载mountedmounted钩子函数可以获取到真实dombeforeupdate  更新updated当数据发生变化并更新页面后，执行updated钩子函数updated钩子函数里可以获取更新后的dombeforedestroy  销毁destroyed手动消除计时器<span class="token operator">/</span>定时器<span class="token operator">/</span>全局事件</code></pre><h2 id="computed和watch区别"><a href="#computed和watch区别" class="headerlink" title="computed和watch区别"></a>computed和watch区别</h2><pre class=" language-js"><code class="language-js">computed<span class="token punctuation">:</span>计算属性<span class="token number">1</span><span class="token punctuation">.</span>初始化显示的属性数据发生变化时调用<span class="token number">2</span><span class="token punctuation">.</span>计算属性不在data中，它是基于data或props中的数据通过计算得到的一个新值，这个新值根据已知值的变化而变化<span class="token number">3</span><span class="token punctuation">.</span>在computed属性对象中定义计算属性的方法，和取data对象里的数据属性一样，以属性访问的形式调用<span class="token number">4</span><span class="token punctuation">.</span>如果computed属性值是函数，那么默认会走<span class="token keyword">get</span>方法，必须要有一个返回值，函数的返回值就是属性的属性值<span class="token number">5</span><span class="token punctuation">.</span>computed属性值会缓存计算结果，在重复的调用中，只要依赖数据不变，直接去缓存中的计算结果，只有依赖数据发生变化，computed才会重新计算<span class="token number">6</span><span class="token punctuation">.</span>在computed中的属性都有一个<span class="token keyword">get</span>和<span class="token keyword">set</span>方法，当数据变化时，调用<span class="token keyword">set</span>方法watch：<span class="token number">1</span><span class="token punctuation">.</span>主要用来监听某些特定数据的变化，从而进行某些具体的业务逻辑操作，可以看做是computed和methods的结合体。<span class="token number">2</span><span class="token punctuation">.</span>可以监听的数据来源：data  props  computed内的数据<span class="token number">3</span><span class="token punctuation">.</span>watch支持异步<span class="token number">4</span><span class="token punctuation">.</span>不支持缓存，监听的数据改变，直接会触发相应的操作<span class="token number">5</span><span class="token punctuation">.</span>监听函数有两个参数，第一个是最新的值，第二个参数是输入之前的值，顺序是新值，旧值</code></pre><h2 id="v-if与v-show区别"><a href="#v-if与v-show区别" class="headerlink" title="v-if与v-show区别"></a>v-if与v-show区别</h2><pre class=" language-js"><code class="language-js">共同点：都能控制元素在页面是否显示<span class="token operator">&lt;</span>Model v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"isShow"</span> <span class="token operator">/</span><span class="token operator">></span><span class="token operator">&lt;</span>Model v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">"isShow"</span> <span class="token operator">/</span><span class="token operator">></span>区别：控制手段不同：v<span class="token operator">-</span>show隐藏是为该元素添加了css<span class="token operator">--</span>display<span class="token punctuation">:</span>none<span class="token punctuation">,</span>dom元素依旧还在。v<span class="token operator">-</span><span class="token keyword">if</span>隐藏是将dom元素整个添加或删除编辑过程不同：v<span class="token operator">-</span><span class="token keyword">if</span>切换有一个局部编译<span class="token operator">/</span>卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件；v<span class="token operator">-</span>show只是简单的基于css切换v<span class="token operator">-</span><span class="token keyword">if</span>有更高的切换消耗；v<span class="token operator">-</span>show有更高的初始渲染消耗使用场景：需要非常频繁地切换，使用v<span class="token operator">-</span>show        在运行时条件很少改变，使用v<span class="token operator">-</span><span class="token keyword">if</span></code></pre><h2 id="vue指令"><a href="#vue指令" class="headerlink" title="vue指令"></a>vue指令</h2><pre class=" language-jsp"><code class="language-jsp">1.v-html  插入一段html片段，相当于innerHTML  语法：v-html = "vue数据变量"  注意：会覆盖插值表达式              设置标签显示的内容  把值当成普通字符串显示2.v-text  渲染字符串，会覆盖原先的字符串  语法: v-text = "vue数据变量"  注意：会覆盖插值表达式              设置标签显示的内容  把值当成标签进行解析显示3.v-show  控制绑定元素的显示与隐藏，通过css方式4.v-if  通过条件，创建或销毁绑定的dom元素5.v-for  循环，重复多次渲染绑定的元素   语法： v-for = "(item,index)  in  vue变量 "  注意：可以遍历数组/对象/数组/字符串  口诀：想要谁循环就放到谁身份  :key  是给v-for循环生成标签颁发唯一标识的，用于性能的优化6.v-bind  将html中属性与vue中变量，进行数据单向绑定，实现数据通信  语法：v-bind:原生属性名 = "vue变量"  简写： :原生属性名 = "vue变量"7.v-on  用于事件绑定，给标签绑定事件  语法： v-on:事件名 = "要执行的少量代码"               v-on:事件名 = "methods中的函数"               v-on:事件名 = "methods中的函数（实参）"  简写：@事件名 = "methods中的函数"8.v-model  将表单控件的value属性和vue的数据变量进行了双向数据绑定  数据变化 => 视图自动同步  视图变化 => 数据自动同步  语法：v-model = "vue数据变量"9.自定义指令  当vue内置指令满足不了需求时，可以自己自定义使用  9.1 全局注册自定义指令  在main.js中         Vue.directive("指令名",&#123;                  inserted(el)&#123;                           ps: el 哪个标签使用了自定义指令  el就是那个dom元素                           e.focus()              &#125;          &#125;)  9.2 局部注册自定义指令         directives:&#123;                 "指令名字":&#123;                        inserted(el)&#123;                            ps: 对el进行操作                   &#125;             &#125;         &#125;9.3 v-xxx  自定义指令  获取原生dom  自定义操作</code></pre><h2 id="vue如何封装一个组件"><a href="#vue如何封装一个组件" class="headerlink" title="vue如何封装一个组件"></a>vue如何封装一个组件</h2><pre class=" language-jsp"><code class="language-jsp">1.首先定义一个后缀为.vue的文件，文件内部由三部分组成，template模板部分，script逻辑部分，style样式部分2.这三个部分是组件的核心部分，组件需要哪些结构，在模板部分书写。  需要什么样的样式外观，通过style部分书写。  有哪些行为在script部分书写，在script部分使用ES6模块化的导出语法进行导出（export default)3.在需要调用组件的地方使用es6模块化导入语法即可，组件需要哪些参数，直接在调用的部分进行传递即可4.主要逻辑是在组件中完成！</code></pre><h2 id="vue的插槽"><a href="#vue的插槽" class="headerlink" title="vue的插槽"></a>vue的插槽</h2><pre class=" language-jsp"><code class="language-jsp">#组件中的标签不确定时，使用插槽vue中插槽：匿名插槽，具名插槽，作用域插槽1.匿名插槽  <slot></slot>2.具名插槽  <slot name="名称"></slot>3.作用域插槽  <slot :自定义name = data中的属性或对象></slot>  可以让组件更加灵活地使用于不同的场景和项目为什么要使用插槽？  我们会通过props传递给组件一些数据让组件进行渲染显示，但是为了让这个组件具有更强的通用性，不能直接将组件的内容固定为div,span这些元素，某些情况下我们是不知道应该使用什么元素的。所以有了插槽，使用插槽不仅可以提高组件的复用性，也可以提高组建的灵活性。v-slot:  简写为  #</code></pre><h2 id="vue修饰符"><a href="#vue修饰符" class="headerlink" title="vue修饰符"></a>vue修饰符</h2><pre class=" language-jsp"><code class="language-jsp">语法： @事件名.修饰符 = "methods里的函数"      .stop  阻止事件冒泡      .prevent  阻止默认行为      .once  程序运行期间，只触发一次事件处理函数      按键修饰符      @keydowm.enter  检测回车按键      @keydowm.esc  监测esc按键      v-model修饰符      语法：v-model.修饰符 = "vue数据变量"           .number  转为数值类型后再赋予给vue数据变量           .trim  去除首尾空白字符           .lazy  在change时触发而非Input时                  change：监听文本框的内容改变，但是需要失去焦点才触发                  input：监听文本框的内容改变</code></pre><h2 id="diff算法"><a href="#diff算法" class="headerlink" title="diff算法"></a>diff算法</h2><pre class=" language-jsp"><code class="language-jsp">vue用diff算法，新虚拟dom和旧虚拟dom比较情况1：根元素变了，删除重建情况2：根元素没变，属性改变，元素复用，更新属性情况3：根元素未变，子元素/内容改变      1.无key - 就地更新      2.有key - 按key比较      diff算法如何比较新旧虚拟dom?  同级比较是一种通过同层的树节点进行比较的高效算法，避免了对树进行逐层搜索遍历，所以时间复杂度只有O(n).diff算法在很多场景下都有应用，例如在虚拟dom渲染成真实DOM的新旧节点比较更新时，就用到这个算法！</code></pre><h2 id="动态class和动态style"><a href="#动态class和动态style" class="headerlink" title="动态class和动态style"></a>动态class和动态style</h2><pre class=" language-jsp"><code class="language-jsp">1.用v-bind给标签class设置动态的值  语法：  :class = "&#123;类名:布尔值&#125;"  如果布尔值为true，则应用此类名的样式  使用场景：vue变量控制标签是否应该有此类名2.给标签动态设置style的值  语法：  :style = "&#123;css属性名:值&#125;"</code></pre><h2 id="vue过滤器"><a href="#vue过滤器" class="headerlink" title="vue过滤器"></a>vue过滤器</h2><pre class=" language-jsp"><code class="language-jsp">#目的：转换格式，过滤器就是一个函数，传入值返回处理后的值--- 过滤器只能使用在：插值表达式和v-bind表达式#语法：全局过滤器：Vue.filter('过滤器名',(值) => &#123;return '返回处理后的值'&#125;)#     局部过滤器：filters:&#123;过滤器名字:(值) => &#123;return '返回处理后的值'&#125;&#125;使用语法：    1.插值表达式使用： &#123;&#123;值 | 过滤器名字&#125;&#125;    2.属性绑定使用：  v-bind:属性 = "值 | 过滤器名字"1.在main.js中定义全局过滤器，在任意的.vue文件内“直接”使用、// 语法: Vue.filter("过滤器名", 值 => 处理结果)// 过滤器接参数Vue.filter("reverse", (val) => &#123;  return val.split("").reverse().join("")&#125;)#过滤器在执行的时候，会将竖线前边的值，作为第一个参数传递给过滤器函数2.局部过滤器，只能在当前vue文件内使用，与data是平级的  filters: &#123;    toUp (val) &#123;      return val.toUpperCase()    &#125;  &#125;</code></pre><h2 id="vue组件通信"><a href="#vue组件通信" class="headerlink" title="vue组件通信"></a>vue组件通信</h2><pre class=" language-jsp"><code class="language-jsp">1.父向子  1.1 子组件内，props接收传递过来的数据  1.2 父组件内，引入子组件，进行注册，使用，在子组件上使用属性绑定进行传输数据  2.子向父  2.1 父组件内使用 @自定义事件名 = "父methods函数"  2.2 子组件内使用 this.$emit('自定义事件名',传值)  3.兄弟组件传值  eventbus  3.1 发送方 Bus.$emit('自定义事件名'，发送的数据)  3.2 接收方 Bus.on('事件名'，data => &#123;          对接收到的数据进行操作 data      &#125;)</code></pre><h2 id="NextTick"><a href="#NextTick" class="headerlink" title="$NextTick"></a>$NextTick</h2><pre class=" language-jsp"><code class="language-jsp">vue在更新DOM时是异步执行的。当数据发生变化，vue将开发一个异步更新队列，视图需要等队列中所有数据变化完成之后，再统一进行更新！$nextTick可以  修改数据后立刻得到更新后的DOM</code></pre><h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><pre class=" language-jsp"><code class="language-jsp">1.webpack是模块化管理和打包工具</code></pre><h2 id="keep-alive"><a href="#keep-alive" class="headerlink" title="keep-alive"></a>keep-alive</h2><pre class=" language-jsp"><code class="language-jsp">作用：缓存组件     避免在切换组件的时候 反复再创建和销毁  增加了性能消耗     不会被渲染在dom树中生命周期：activated  激活时        deactivated</code></pre><h2 id="let-const-var区别"><a href="#let-const-var区别" class="headerlink" title="let const var区别"></a>let const var区别</h2><pre class=" language-jsp"><code class="language-jsp">var会挂载window let和const不会挂载var存在变量提升  let和const不存在let和const存在块级作用域let和const同一作用域内不可以声明同名变量，var可以</code></pre><h2 id="call-bind-apply区别"><a href="#call-bind-apply区别" class="headerlink" title="call bind apply区别"></a>call bind apply区别</h2><pre class=" language-jsp"><code class="language-jsp">共同点：改变this的指向，在用法上有些区别不同的：call和apply是立即执行的，主要区别就是在传递参数上的不同，        call后面传递的参数是以逗号形式分开的，       apply后面传递的参数是以数组形式；       bind后面返回的是一个函数形式，如果要执行，则后面要再加一个小括号，bind只能以逗号分隔形式</code></pre><h2 id="for-in与for-of区别"><a href="#for-in与for-of区别" class="headerlink" title="for in与for of区别"></a>for in与for of区别</h2><pre class=" language-jsp"><code class="language-jsp">在对数组或对象进行遍历的时候，使用这两种方法for in遍历的是数组的索引 indexfor of遍历的是数组的元素值 valuefor in更适合遍历对象</code></pre><h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><pre class=" language-jsp"><code class="language-jsp">每个函数都有一个prototype属性，这个属性指向原型对象、使用原型对象的好处就是所有对象实例共享它所包含的属性和方法。  访问一个对象的属性时，如果该对象内部不存在这个属性，那么就会沿着它的_proto_属性指向的那个对象里找，知道为null为止，这样一层一层就形成了原型链，主要解决了继承的问题</code></pre><h2 id="父子组件生命周期指向顺序"><a href="#父子组件生命周期指向顺序" class="headerlink" title="父子组件生命周期指向顺序"></a>父子组件生命周期指向顺序</h2><pre class=" language-jsp"><code class="language-jsp">父beforecreate - 父created - 子beforecreate -子created -子mounted - 父mounted</code></pre><h2 id="vue路由"><a href="#vue路由" class="headerlink" title="vue路由"></a>vue路由</h2><pre class=" language-jsp"><code class="language-jsp">主要通过以下两种技术1.利用h5的history api实现  主要通过historey.push和history.replace实现  push会增加一条新的历史记录，replace会替换当前的历史记录2.利用url的hash实现  hash主要利用监听哈希值的变化来触发事件</code></pre><h2 id="重绘和回流"><a href="#重绘和回流" class="headerlink" title="重绘和回流"></a>重绘和回流</h2><pre class=" language-jsp"><code class="language-jsp">当DOM的修改导致了样式的变化，并且没有影响到集合属性的时候，会导致重绘。当DOM元素的修改引发DOM集合尺寸的时候，会发生回流。宽高变化等。重绘不一定导致回流，回流一定发生重绘。</code></pre><h2 id="事件循环机制"><a href="#事件循环机制" class="headerlink" title="事件循环机制"></a>事件循环机制</h2><pre class=" language-jsp"><code class="language-jsp">  是js的一个底层运行原理，js是单线程的，但是也有一些耗时任务，会影响执行效率。代码都在主线程中执行，当遇见像ajax请求，定时器时候，会单独开启异步线程。  异步线程耗时之后会推入异步队列中等待执行，然后当主线程执行完毕后，回到异步队列中取出到主线程中执行。  然后再去异步队列中取第二个，这个来回取的过程乐意称之为事件循环。</code></pre><h2 id="vue最大特点"><a href="#vue最大特点" class="headerlink" title="vue最大特点"></a>vue最大特点</h2><pre class=" language-jsp"><code class="language-jsp">vue最大特点，我觉得就是“组件化”和“数据驱动”。组件化就是可以将页面和页面中可复用的元素都看成组件，写页面的过程就是写组件，然后页面是由这些组件“拼接”起来的组件树。数据驱动就是让我们只关注数据层，只要数据变化，页面也就是视图层，会自动更新，数据变了页面自动同步变化。</code></pre><h2 id="ES6新特性"><a href="#ES6新特性" class="headerlink" title="ES6新特性"></a>ES6新特性</h2><pre class=" language-jsp"><code class="language-jsp">let const关键字extends继承箭头函数imort export模块化开发解构赋值模板字符串</code></pre><h2 id="css3新特性"><a href="#css3新特性" class="headerlink" title="css3新特性"></a>css3新特性</h2><pre class=" language-jsp"><code class="language-jsp">边框圆角盒子阴影文本阴影动画transform 2D和3D转换</code></pre><h2 id="项目中可做的优化"><a href="#项目中可做的优化" class="headerlink" title="项目中可做的优化"></a>项目中可做的优化</h2><pre class=" language-jsp"><code class="language-jsp">一些定时器，事件监听要在销毁期声明钩子结束掉公共组件的封装公共过滤方法的封装没有使用的变量要删除图片懒加载路由懒加载第三方库按需引入webpack层面的优化：对图片进行压缩</code></pre>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>html</title>
-      <link href="/2022/10/03/html/"/>
-      <url>/2022/10/03/html/</url>
-      
-        <content type="html"><![CDATA[<h1 id="HTML5新特性"><a href="#HTML5新特性" class="headerlink" title="HTML5新特性"></a>HTML5新特性</h1><pre><code>1.html5语义化概念  html5语义化指的是合理使用语义化的标签来创建页面结构2.语义化标签  header main footer nav aside  3.语义化优点  代码结构清晰；利于开发与维护</code></pre><h1 id="css选择器和优先级"><a href="#css选择器和优先级" class="headerlink" title="css选择器和优先级"></a>css选择器和优先级</h1><pre><code>1.css选择器  id选择器  类选择器  标签选择器  属性选择器  伪类选择器  2.优先级  !important &gt; 行内样式 &gt; id选择器 &gt; 类选择器（属性选择器|伪类选择器） &gt; 标签选择器 &gt; 通配符选择器 &gt; 继承</code></pre><h1 id="position属性"><a href="#position属性" class="headerlink" title="position属性"></a>position属性</h1><pre><code>1.相对定位relative  不脱离文档流，相对于原来所在的位置进行移动。原来的空间存在。  2.绝对定位absolute  脱离文档流，相对于最近的已定位的父元素进行移动，如果没有已定位的父元素，它的位置相对于body进行移动。</code></pre><ul><li>横杠加空格是个点<br>个人建议在国内的网站上下载</li><li>vscode</li></ul><span id="more"></span><h2 id="图片是"><a href="#图片是" class="headerlink" title="图片是"></a>图片是</h2><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2.niutuku.com%2Fdesk%2F1208%2F1300%2Fntk-1300-31979.jpg&refer=http%3A%2F%2Fimg2.niutuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667399649&t=5e6e025017d69a217135468e36ffaf3b"></p><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="https://code.visualstudio.com/">vscode 下载</a></p><p>1.html<br>2.css<br>3.js<br>4.vue</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> web </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
+2.优先级
+  !important &gt; 行内样式 &gt; id选择器 &gt; 类选择器（属性选择器|伪类选择器） &gt; 标签选择器 &gt; 通配符选择器 &gt; 继承
+</code></pre>
+<h1 id="position属性"><a href="#position属性" class="headerlink" title="position属性"></a>position属性</h1><pre><code>1.相对定位relative
+  不脱离文档流，相对于原来所在的位置进行移动。原来的空间存在。
   
+2.绝对定位absolute
+  脱离文档流，相对于最近的已定位的父元素进行移动，如果没有已定位的父元素，它的位置相对于body进行移动。
+</code></pre>
+<ul>
+<li>横杠加空格是个点<br>个人建议在国内的网站上下载</li>
+<li>vscode</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="图片是"><a href="#图片是" class="headerlink" title="图片是"></a>图片是</h2><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2.niutuku.com%2Fdesk%2F1208%2F1300%2Fntk-1300-31979.jpg&refer=http%3A%2F%2Fimg2.niutuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667399649&t=5e6e025017d69a217135468e36ffaf3b"></p>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="https://code.visualstudio.com/">vscode 下载</a></p>
+<p>1.html<br>2.css<br>3.js<br>4.vue</p>
+]]></content>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>笔记</title>
+    <url>/2022/10/05/%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="数组遍历方法"><a href="#数组遍历方法" class="headerlink" title="数组遍历方法"></a>数组遍历方法</h2><p>1.every()<br>  作用：用于检测数组所有元素是否都符合指定条件<br>  返回值：都符合返回true，否则返回false</p>
+<p>2.forEach()<br>  作用：调用数组的每个元素，并将元素传递给回调函数<br>  注意：对于空数组不执行回调函数</p>
+<span id="more"></span>
+
+
+
+<pre class=" language-jsp"><code class="language-jsp">3.map()
+  作用：按照原始数组元素顺序依次处理元素
+  返回值：返回新数组，新数组中的元素为原始数组元素处理后的元素
+  注意：不会对空数组进行检测；不会改变原始数组
+
+4.reduce()
+  作用：累加器！遍历数组的每一项，接收两个参数
+       第一个参数：每次遍历都会调用的函数，接收四个参数（前一个值，当前项，项目的索引，数组对象），函数的返回值回传给下一次遍历时，执行这个方法的第一个采纳数
+       第二个参数：归并基础的初始值
+  arr.reduce((prevent,item,index,arr)=>&#123;&#125;,0)
+
+5.some()
+  作用：检测数组中的元素是否满足指定条件。会依次执行数组的每个元素，如果有一个元素满足条件，返回true，剩下的不会执行。没有满足的元素，返回false
+  注意：不会对空数组进行检测，不会改变原始数组
+
+6.filter()
+  作用：遍历数组，过滤出符合条件的元素
+  返回值：返回新数组，将满足条件的元素放入新数组中。没有符合条件的元素，返回空数组
+  注意：不会对空数组进行过滤，不会改变原始数组
+
+7.findIndex()
+  作用：返回符合条件的数组中第一个元素的索引
+
+8.find()
+  作用：返回第一个满足条件的元素，如果没有满足条件的元素，返回undefined
+</code></pre>
+<h2 id="数组操作方法"><a href="#数组操作方法" class="headerlink" title="数组操作方法"></a>数组操作方法</h2><h3 id="改变原数组"><a href="#改变原数组" class="headerlink" title="改变原数组"></a>改变原数组</h3><pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：向数组的末尾添加一个或多个元素  返回新的长度
+
+<span class="token number">2</span><span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：删除一个数组中的最后一个元素  返回这个元素
+
+<span class="token number">3</span><span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：删除数组的第一个元素  返回这个元素
+
+<span class="token number">4</span><span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：向数组的开头添加一个或多个元素  返回新的长度
+
+<span class="token number">5</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：颠倒数组中元素的顺序
+
+<span class="token number">6</span><span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：向<span class="token operator">/</span>从数组中添加<span class="token operator">/</span>删除项目
+  返回值：如果有元素被删除，返回包含删除项目的新数组
+  语法：array<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span>howmany<span class="token punctuation">,</span>item1<span class="token punctuation">,</span><span class="token operator">...</span>itemX<span class="token punctuation">)</span>
+       index<span class="token punctuation">:</span>必须，整数，规定添加<span class="token operator">/</span>删除项目的位置，负数从数组结尾处规定位置
+       howmany<span class="token punctuation">:</span>可选，要删除的项目数量
+       item1<span class="token operator">...</span><span class="token punctuation">:</span>可选，向数组添加的新项目
+       
+<span class="token number">7</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：数组排序  返回这个数组
+</code></pre>
+<h3 id="不改变原数组"><a href="#不改变原数组" class="headerlink" title="不改变原数组"></a>不改变原数组</h3><pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：浅拷贝数组的元素
+  定义：方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象
+  浅拷贝，元素是简单数据类型，改变之后不会相互干扰
+
+<span class="token number">2</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：数组转字符串  把数组中的所有元素通过指定的分隔符进行分隔放入一个字符串，返回生成的字符串  默认以逗号进行分隔
+
+<span class="token number">3</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：用户合并两个或多个数组  返回一个新数组
+
+<span class="token number">4</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：查找数组是否存在某个元素，返回下标，不存在返回<span class="token operator">-</span><span class="token number">1</span>
+  是全等
+</code></pre>
+<h2 id="vue的生命周期"><a href="#vue的生命周期" class="headerlink" title="vue的生命周期"></a>vue的生命周期</h2><pre class=" language-js"><code class="language-js">生命周期：用来描述一个组件从创建到销毁的全过程
+beforecreate  初始化
+created
+vue实例从创建到编译模板执行了这两个初始化钩子函数
+created能获取data，不能获取真实dom
+
+beforemounted  挂载
+mounted
+mounted钩子函数可以获取到真实dom
+
+beforeupdate  更新
+updated
+当数据发生变化并更新页面后，执行updated钩子函数
+updated钩子函数里可以获取更新后的dom
+
+beforedestroy  销毁
+destroyed
+手动消除计时器<span class="token operator">/</span>定时器<span class="token operator">/</span>全局事件
+</code></pre>
+<h2 id="computed和watch区别"><a href="#computed和watch区别" class="headerlink" title="computed和watch区别"></a>computed和watch区别</h2><pre class=" language-js"><code class="language-js">computed<span class="token punctuation">:</span>计算属性
+<span class="token number">1</span><span class="token punctuation">.</span>初始化显示的属性数据发生变化时调用
+<span class="token number">2</span><span class="token punctuation">.</span>计算属性不在data中，它是基于data或props中的数据通过计算得到的一个新值，这个新值根据已知值的变化而变化
+<span class="token number">3</span><span class="token punctuation">.</span>在computed属性对象中定义计算属性的方法，和取data对象里的数据属性一样，以属性访问的形式调用
+<span class="token number">4</span><span class="token punctuation">.</span>如果computed属性值是函数，那么默认会走<span class="token keyword">get</span>方法，必须要有一个返回值，函数的返回值就是属性的属性值
+<span class="token number">5</span><span class="token punctuation">.</span>computed属性值会缓存计算结果，在重复的调用中，只要依赖数据不变，直接去缓存中的计算结果，只有依赖数据发生变化，computed才会重新计算
+<span class="token number">6</span><span class="token punctuation">.</span>在computed中的属性都有一个<span class="token keyword">get</span>和<span class="token keyword">set</span>方法，当数据变化时，调用<span class="token keyword">set</span>方法
+
+watch：
+<span class="token number">1</span><span class="token punctuation">.</span>主要用来监听某些特定数据的变化，从而进行某些具体的业务逻辑操作，可以看做是computed和methods的结合体。
+<span class="token number">2</span><span class="token punctuation">.</span>可以监听的数据来源：data  props  computed内的数据
+<span class="token number">3</span><span class="token punctuation">.</span>watch支持异步
+<span class="token number">4</span><span class="token punctuation">.</span>不支持缓存，监听的数据改变，直接会触发相应的操作
+<span class="token number">5</span><span class="token punctuation">.</span>监听函数有两个参数，第一个是最新的值，第二个参数是输入之前的值，顺序是新值，旧值
+</code></pre>
+<h2 id="v-if与v-show区别"><a href="#v-if与v-show区别" class="headerlink" title="v-if与v-show区别"></a>v-if与v-show区别</h2><pre class=" language-js"><code class="language-js">共同点：都能控制元素在页面是否显示
+<span class="token operator">&lt;</span>Model v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"isShow"</span> <span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>Model v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">"isShow"</span> <span class="token operator">/</span><span class="token operator">></span>
+
+区别：
+控制手段不同：v<span class="token operator">-</span>show隐藏是为该元素添加了css<span class="token operator">--</span>display<span class="token punctuation">:</span>none<span class="token punctuation">,</span>dom元素依旧还在。v<span class="token operator">-</span><span class="token keyword">if</span>隐藏是将dom元素整个添加或删除
+
+编辑过程不同：v<span class="token operator">-</span><span class="token keyword">if</span>切换有一个局部编译<span class="token operator">/</span>卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件；v<span class="token operator">-</span>show只是简单的基于css切换
+
+v<span class="token operator">-</span><span class="token keyword">if</span>有更高的切换消耗；v<span class="token operator">-</span>show有更高的初始渲染消耗
+
+使用场景：需要非常频繁地切换，使用v<span class="token operator">-</span>show
+        在运行时条件很少改变，使用v<span class="token operator">-</span><span class="token keyword">if</span>
+</code></pre>
+<h2 id="vue指令"><a href="#vue指令" class="headerlink" title="vue指令"></a>vue指令</h2><pre class=" language-jsp"><code class="language-jsp">1.v-html
+
+  插入一段html片段，相当于innerHTML
+
+  语法：v-html = "vue数据变量"
+
+  注意：会覆盖插值表达式
+
+              设置标签显示的内容  把值当成普通字符串显示
+
+2.v-text
+
+  渲染字符串，会覆盖原先的字符串
+
+  语法: v-text = "vue数据变量"
+
+  注意：会覆盖插值表达式
+
+              设置标签显示的内容  把值当成标签进行解析显示
+
+3.v-show
+
+  控制绑定元素的显示与隐藏，通过css方式
+
+4.v-if
+
+  通过条件，创建或销毁绑定的dom元素
+
+5.v-for
+
+  循环，重复多次渲染绑定的元素 
+
+  语法： v-for = "(item,index)  in  vue变量 "
+
+  注意：可以遍历数组/对象/数组/字符串
+
+  口诀：想要谁循环就放到谁身份
+
+  :key  是给v-for循环生成标签颁发唯一标识的，用于性能的优化
+
+6.v-bind
+
+  将html中属性与vue中变量，进行数据单向绑定，实现数据通信
+
+  语法：v-bind:原生属性名 = "vue变量"
+
+  简写： :原生属性名 = "vue变量"
+
+7.v-on
+
+  用于事件绑定，给标签绑定事件
+
+  语法： v-on:事件名 = "要执行的少量代码"
+
+               v-on:事件名 = "methods中的函数"
+
+               v-on:事件名 = "methods中的函数（实参）"
+
+  简写：@事件名 = "methods中的函数"
+
+8.v-model
+
+  将表单控件的value属性和vue的数据变量进行了双向数据绑定
+
+  数据变化 => 视图自动同步
+
+  视图变化 => 数据自动同步
+
+  语法：v-model = "vue数据变量"
+
+9.自定义指令
+
+  当vue内置指令满足不了需求时，可以自己自定义使用
+
+  9.1 全局注册自定义指令  在main.js中
+
+         Vue.directive("指令名",&#123;
+
+                  inserted(el)&#123;
+
+                           ps: el 哪个标签使用了自定义指令  el就是那个dom元素
+
+                           e.focus()
+
+              &#125;
+
+          &#125;)
+
+  9.2 局部注册自定义指令
+
+         directives:&#123;
+
+                 "指令名字":&#123;
+
+                        inserted(el)&#123;
+
+                            ps: 对el进行操作
+
+                   &#125;
+
+             &#125;
+
+         &#125;
+
+9.3 v-xxx  自定义指令  获取原生dom  自定义操作
+</code></pre>
+<h2 id="vue如何封装一个组件"><a href="#vue如何封装一个组件" class="headerlink" title="vue如何封装一个组件"></a>vue如何封装一个组件</h2><pre class=" language-jsp"><code class="language-jsp">1.首先定义一个后缀为.vue的文件，文件内部由三部分组成，template模板部分，script逻辑部分，style样式部分
+2.这三个部分是组件的核心部分，组件需要哪些结构，在模板部分书写。
+  需要什么样的样式外观，通过style部分书写。
+  有哪些行为在script部分书写，在script部分使用ES6模块化的导出语法进行导出（export default)
+3.在需要调用组件的地方使用es6模块化导入语法即可，组件需要哪些参数，直接在调用的部分进行传递即可
+4.主要逻辑是在组件中完成！
+</code></pre>
+<h2 id="vue的插槽"><a href="#vue的插槽" class="headerlink" title="vue的插槽"></a>vue的插槽</h2><pre class=" language-jsp"><code class="language-jsp">#组件中的标签不确定时，使用插槽
+vue中插槽：匿名插槽，具名插槽，作用域插槽
+
+1.匿名插槽  <slot></slot>
+2.具名插槽  <slot name="名称"></slot>
+3.作用域插槽  <slot :自定义name = data中的属性或对象></slot>
+  可以让组件更加灵活地使用于不同的场景和项目
+
+为什么要使用插槽？
+  我们会通过props传递给组件一些数据让组件进行渲染显示，但是为了让这个组件具有更强的通用性，不能直接将组件的内容固定为div,span这些元素，某些情况下我们是不知道应该使用什么元素的。所以有了插槽，使用插槽不仅可以提高组件的复用性，也可以提高组建的灵活性。
+
+v-slot:  简写为  #
+</code></pre>
+<h2 id="vue修饰符"><a href="#vue修饰符" class="headerlink" title="vue修饰符"></a>vue修饰符</h2><pre class=" language-jsp"><code class="language-jsp">语法： @事件名.修饰符 = "methods里的函数"
+      .stop  阻止事件冒泡
+      .prevent  阻止默认行为
+      .once  程序运行期间，只触发一次事件处理函数
+      
+按键修饰符
+      @keydowm.enter  检测回车按键
+      @keydowm.esc  监测esc按键
+      
+v-model修饰符
+      语法：v-model.修饰符 = "vue数据变量"
+           .number  转为数值类型后再赋予给vue数据变量
+           .trim  去除首尾空白字符
+           .lazy  在change时触发而非Input时
+                  change：监听文本框的内容改变，但是需要失去焦点才触发
+                  input：监听文本框的内容改变
+</code></pre>
+<h2 id="diff算法"><a href="#diff算法" class="headerlink" title="diff算法"></a>diff算法</h2><pre class=" language-jsp"><code class="language-jsp">vue用diff算法，新虚拟dom和旧虚拟dom比较
+
+情况1：根元素变了，删除重建
+情况2：根元素没变，属性改变，元素复用，更新属性
+情况3：根元素未变，子元素/内容改变
+      1.无key - 就地更新
+      2.有key - 按key比较
+      
+diff算法如何比较新旧虚拟dom?  同级比较
+
+是一种通过同层的树节点进行比较的高效算法，避免了对树进行逐层搜索遍历，所以时间复杂度只有O(n).diff算法在很多场景下都有应用，例如在虚拟dom渲染成真实DOM的新旧节点比较更新时，就用到这个算法！
+</code></pre>
+<h2 id="动态class和动态style"><a href="#动态class和动态style" class="headerlink" title="动态class和动态style"></a>动态class和动态style</h2><pre class=" language-jsp"><code class="language-jsp">1.用v-bind给标签class设置动态的值
+  语法：  :class = "&#123;类名:布尔值&#125;"
+  如果布尔值为true，则应用此类名的样式
   
+使用场景：vue变量控制标签是否应该有此类名
+
+2.给标签动态设置style的值
+  语法：  :style = "&#123;css属性名:值&#125;"
+</code></pre>
+<h2 id="vue过滤器"><a href="#vue过滤器" class="headerlink" title="vue过滤器"></a>vue过滤器</h2><pre class=" language-jsp"><code class="language-jsp">#目的：转换格式，过滤器就是一个函数，传入值返回处理后的值
+
+--- 过滤器只能使用在：插值表达式和v-bind表达式
+
+#语法：全局过滤器：Vue.filter('过滤器名',(值) => &#123;return '返回处理后的值'&#125;)
+#     局部过滤器：filters:&#123;过滤器名字:(值) => &#123;return '返回处理后的值'&#125;&#125;
+
+使用语法：
+    1.插值表达式使用： &#123;&#123;值 | 过滤器名字&#125;&#125;
+    2.属性绑定使用：  v-bind:属性 = "值 | 过滤器名字"
+
+1.在main.js中定义全局过滤器，在任意的.vue文件内“直接”使用、
+// 语法: Vue.filter("过滤器名", 值 => 处理结果)
+
+// 过滤器接参数
+Vue.filter("reverse", (val) => &#123;
+  return val.split("").reverse().join("")
+&#125;)
+#过滤器在执行的时候，会将竖线前边的值，作为第一个参数传递给过滤器函数
+
+2.局部过滤器，只能在当前vue文件内使用，与data是平级的
+  filters: &#123;
+    toUp (val) &#123;
+      return val.toUpperCase()
+    &#125;
+  &#125;
+</code></pre>
+<h2 id="vue组件通信"><a href="#vue组件通信" class="headerlink" title="vue组件通信"></a>vue组件通信</h2><pre class=" language-jsp"><code class="language-jsp">1.父向子
+  1.1 子组件内，props接收传递过来的数据
+  1.2 父组件内，引入子组件，进行注册，使用，在子组件上使用属性绑定进行传输数据
+  
+2.子向父
+  2.1 父组件内使用 @自定义事件名 = "父methods函数"
+  2.2 子组件内使用 this.$emit('自定义事件名',传值)
+  
+3.兄弟组件传值
+  eventbus
+  3.1 发送方 Bus.$emit('自定义事件名'，发送的数据)
+  3.2 接收方 Bus.on('事件名'，data => &#123;
+          对接收到的数据进行操作 data
+      &#125;)
+</code></pre>
+<h2 id="NextTick"><a href="#NextTick" class="headerlink" title="$NextTick"></a>$NextTick</h2><pre class=" language-jsp"><code class="language-jsp">vue在更新DOM时是异步执行的。
+当数据发生变化，vue将开发一个异步更新队列，视图需要等队列中所有数据变化完成之后，再统一进行更新！
+
+$nextTick可以  修改数据后立刻得到更新后的DOM
+</code></pre>
+<h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><pre class=" language-jsp"><code class="language-jsp">1.webpack是模块化管理和打包工具
+</code></pre>
+<h2 id="keep-alive"><a href="#keep-alive" class="headerlink" title="keep-alive"></a>keep-alive</h2><pre class=" language-jsp"><code class="language-jsp">作用：缓存组件
+     避免在切换组件的时候 反复再创建和销毁  增加了性能消耗
+     不会被渲染在dom树中
+生命周期：activated  激活时
+        deactivated
+</code></pre>
+<h2 id="let-const-var区别"><a href="#let-const-var区别" class="headerlink" title="let const var区别"></a>let const var区别</h2><pre class=" language-jsp"><code class="language-jsp">var会挂载window let和const不会挂载
+var存在变量提升  let和const不存在
+let和const存在块级作用域
+let和const同一作用域内不可以声明同名变量，var可以
+</code></pre>
+<h2 id="call-bind-apply区别"><a href="#call-bind-apply区别" class="headerlink" title="call bind apply区别"></a>call bind apply区别</h2><pre class=" language-jsp"><code class="language-jsp">共同点：改变this的指向，在用法上有些区别
+不同的：call和apply是立即执行的，主要区别就是在传递参数上的不同，        call后面传递的参数是以逗号形式分开的，
+       apply后面传递的参数是以数组形式；
+       bind后面返回的是一个函数形式，如果要执行，则后面要再加一个小括号，bind只能以逗号分隔形式
+</code></pre>
+<h2 id="for-in与for-of区别"><a href="#for-in与for-of区别" class="headerlink" title="for in与for of区别"></a>for in与for of区别</h2><pre class=" language-jsp"><code class="language-jsp">在对数组或对象进行遍历的时候，使用这两种方法
+for in遍历的是数组的索引 index
+for of遍历的是数组的元素值 value
+for in更适合遍历对象
+</code></pre>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><pre class=" language-jsp"><code class="language-jsp">每个函数都有一个prototype属性，这个属性指向原型对象、
+使用原型对象的好处就是所有对象实例共享它所包含的属性和方法。
+  访问一个对象的属性时，如果该对象内部不存在这个属性，那么就会沿着它的_proto_属性指向的那个对象里找，知道为null为止，这样一层一层就形成了原型链，主要解决了继承的问题
+</code></pre>
+<h2 id="父子组件生命周期指向顺序"><a href="#父子组件生命周期指向顺序" class="headerlink" title="父子组件生命周期指向顺序"></a>父子组件生命周期指向顺序</h2><pre class=" language-jsp"><code class="language-jsp">父beforecreate - 父created - 子beforecreate -子created -子mounted - 父mounted
+</code></pre>
+<h2 id="vue路由"><a href="#vue路由" class="headerlink" title="vue路由"></a>vue路由</h2><pre class=" language-jsp"><code class="language-jsp">主要通过以下两种技术
+1.利用h5的history api实现
+  主要通过historey.push和history.replace实现
+  push会增加一条新的历史记录，replace会替换当前的历史记录
+2.利用url的hash实现
+  hash主要利用监听哈希值的变化来触发事件
+</code></pre>
+<h2 id="重绘和回流"><a href="#重绘和回流" class="headerlink" title="重绘和回流"></a>重绘和回流</h2><pre class=" language-jsp"><code class="language-jsp">当DOM的修改导致了样式的变化，并且没有影响到集合属性的时候，会导致重绘。
+当DOM元素的修改引发DOM集合尺寸的时候，会发生回流。宽高变化等。
+重绘不一定导致回流，回流一定发生重绘。
+</code></pre>
+<h2 id="事件循环机制"><a href="#事件循环机制" class="headerlink" title="事件循环机制"></a>事件循环机制</h2><pre class=" language-jsp"><code class="language-jsp">  是js的一个底层运行原理，js是单线程的，但是也有一些耗时任务，会影响执行效率。代码都在主线程中执行，当遇见像ajax请求，定时器时候，会单独开启异步线程。
+  异步线程耗时之后会推入异步队列中等待执行，然后当主线程执行完毕后，回到异步队列中取出到主线程中执行。
+  然后再去异步队列中取第二个，这个来回取的过程乐意称之为事件循环。
+</code></pre>
+<h2 id="vue最大特点"><a href="#vue最大特点" class="headerlink" title="vue最大特点"></a>vue最大特点</h2><pre class=" language-jsp"><code class="language-jsp">vue最大特点，我觉得就是“组件化”和“数据驱动”。
+组件化就是可以将页面和页面中可复用的元素都看成组件，写页面的过程就是写组件，然后页面是由这些组件“拼接”起来的组件树。
+数据驱动就是让我们只关注数据层，只要数据变化，页面也就是视图层，会自动更新，数据变了页面自动同步变化。
+</code></pre>
+<h2 id="ES6新特性"><a href="#ES6新特性" class="headerlink" title="ES6新特性"></a>ES6新特性</h2><pre class=" language-jsp"><code class="language-jsp">let const关键字
+extends继承
+箭头函数
+imort export模块化开发
+解构赋值
+模板字符串
+</code></pre>
+<h2 id="css3新特性"><a href="#css3新特性" class="headerlink" title="css3新特性"></a>css3新特性</h2><pre class=" language-jsp"><code class="language-jsp">边框圆角
+盒子阴影
+文本阴影
+动画
+transform 2D和3D转换
+</code></pre>
+<h2 id="项目中可做的优化"><a href="#项目中可做的优化" class="headerlink" title="项目中可做的优化"></a>项目中可做的优化</h2><pre class=" language-jsp"><code class="language-jsp">一些定时器，事件监听要在销毁期声明钩子结束掉
+公共组件的封装
+公共过滤方法的封装
+没有使用的变量要删除
+图片懒加载
+路由懒加载
+第三方库按需引入
+webpack层面的优化：对图片进行压缩
+</code></pre>
+]]></content>
+  </entry>
 </search>
