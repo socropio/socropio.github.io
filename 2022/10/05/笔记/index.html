@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/zixi.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/zixi.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/zixi.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/zixi.jpg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="紫曦" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="数组遍历方法1.every()  作用：用于检测数组所有元素是否都符合指定条件  返回值：都符合返回true，否则返回false 2.forEach()  作用：调用数组的每个元素，并将元素传递给回调函数  注意：对于空数组不执行回调函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记">
+<meta property="og:url" content="https://socropio.github.io/2022/10/05/%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="紫曦">
+<meta property="og:description" content="数组遍历方法1.every()  作用：用于检测数组所有元素是否都符合指定条件  返回值：都符合返回true，否则返回false 2.forEach()  作用：调用数组的每个元素，并将元素传递给回调函数  注意：对于空数组不执行回调函数">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-05T08:35:34.000Z">
+<meta property="article:modified_time" content="2022-10-05T16:22:59.243Z">
+<meta property="article:author" content="ZiXi">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://socropio.github.io/2022/10/05/笔记/"/>
+
+
+
+
+
+  <title>笔记 | 紫曦</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">紫曦</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">心中有梦 不负韶华</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://socropio.github.io/2022/10/05/%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="紫曦">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/zixi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="紫曦">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-10-05T16:35:34+08:00">
+                2022-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="数组遍历方法"><a href="#数组遍历方法" class="headerlink" title="数组遍历方法"></a>数组遍历方法</h2><p>1.every()<br>  作用：用于检测数组所有元素是否都符合指定条件<br>  返回值：都符合返回true，否则返回false</p>
+<p>2.forEach()<br>  作用：调用数组的每个元素，并将元素传递给回调函数<br>  注意：对于空数组不执行回调函数</p>
+<span id="more"></span>
+
+
+
+<pre class=" language-jsp"><code class="language-jsp">3.map()
+  作用：按照原始数组元素顺序依次处理元素
+  返回值：返回新数组，新数组中的元素为原始数组元素处理后的元素
+  注意：不会对空数组进行检测；不会改变原始数组
+
+4.reduce()
+  作用：累加器！遍历数组的每一项，接收两个参数
+       第一个参数：每次遍历都会调用的函数，接收四个参数（前一个值，当前项，项目的索引，数组对象），函数的返回值回传给下一次遍历时，执行这个方法的第一个采纳数
+       第二个参数：归并基础的初始值
+  arr.reduce((prevent,item,index,arr)=>&#123;&#125;,0)
+
+5.some()
+  作用：检测数组中的元素是否满足指定条件。会依次执行数组的每个元素，如果有一个元素满足条件，返回true，剩下的不会执行。没有满足的元素，返回false
+  注意：不会对空数组进行检测，不会改变原始数组
+
+6.filter()
+  作用：遍历数组，过滤出符合条件的元素
+  返回值：返回新数组，将满足条件的元素放入新数组中。没有符合条件的元素，返回空数组
+  注意：不会对空数组进行过滤，不会改变原始数组
+
+7.findIndex()
+  作用：返回符合条件的数组中第一个元素的索引
+
+8.find()
+  作用：返回第一个满足条件的元素，如果没有满足条件的元素，返回undefined
+</code></pre>
+<h2 id="数组操作方法"><a href="#数组操作方法" class="headerlink" title="数组操作方法"></a>数组操作方法</h2><h3 id="改变原数组"><a href="#改变原数组" class="headerlink" title="改变原数组"></a>改变原数组</h3><pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：向数组的末尾添加一个或多个元素  返回新的长度
+
+<span class="token number">2</span><span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：删除一个数组中的最后一个元素  返回这个元素
+
+<span class="token number">3</span><span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：删除数组的第一个元素  返回这个元素
+
+<span class="token number">4</span><span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：向数组的开头添加一个或多个元素  返回新的长度
+
+<span class="token number">5</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：颠倒数组中元素的顺序
+
+<span class="token number">6</span><span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：向<span class="token operator">/</span>从数组中添加<span class="token operator">/</span>删除项目
+  返回值：如果有元素被删除，返回包含删除项目的新数组
+  语法：array<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span>howmany<span class="token punctuation">,</span>item1<span class="token punctuation">,</span><span class="token operator">...</span>itemX<span class="token punctuation">)</span>
+       index<span class="token punctuation">:</span>必须，整数，规定添加<span class="token operator">/</span>删除项目的位置，负数从数组结尾处规定位置
+       howmany<span class="token punctuation">:</span>可选，要删除的项目数量
+       item1<span class="token operator">...</span><span class="token punctuation">:</span>可选，向数组添加的新项目
+       
+<span class="token number">7</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：数组排序  返回这个数组
+</code></pre>
+<h3 id="不改变原数组"><a href="#不改变原数组" class="headerlink" title="不改变原数组"></a>不改变原数组</h3><pre class=" language-js"><code class="language-js"><span class="token number">1</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：浅拷贝数组的元素
+  定义：方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象
+  浅拷贝，元素是简单数据类型，改变之后不会相互干扰
+
+<span class="token number">2</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：数组转字符串  把数组中的所有元素通过指定的分隔符进行分隔放入一个字符串，返回生成的字符串  默认以逗号进行分隔
+
+<span class="token number">3</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：用户合并两个或多个数组  返回一个新数组
+
+<span class="token number">4</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  作用：查找数组是否存在某个元素，返回下标，不存在返回<span class="token operator">-</span><span class="token number">1</span>
+  是全等
+</code></pre>
+<h2 id="vue的生命周期"><a href="#vue的生命周期" class="headerlink" title="vue的生命周期"></a>vue的生命周期</h2><pre class=" language-js"><code class="language-js">生命周期：用来描述一个组件从创建到销毁的全过程
+beforecreate  初始化
+created
+vue实例从创建到编译模板执行了这两个初始化钩子函数
+created能获取data，不能获取真实dom
+
+beforemounted  挂载
+mounted
+mounted钩子函数可以获取到真实dom
+
+beforeupdate  更新
+updated
+当数据发生变化并更新页面后，执行updated钩子函数
+updated钩子函数里可以获取更新后的dom
+
+beforedestroy  销毁
+destroyed
+手动消除计时器<span class="token operator">/</span>定时器<span class="token operator">/</span>全局事件
+</code></pre>
+<h2 id="computed和watch区别"><a href="#computed和watch区别" class="headerlink" title="computed和watch区别"></a>computed和watch区别</h2><pre class=" language-js"><code class="language-js">computed<span class="token punctuation">:</span>计算属性
+<span class="token number">1</span><span class="token punctuation">.</span>初始化显示的属性数据发生变化时调用
+<span class="token number">2</span><span class="token punctuation">.</span>计算属性不在data中，它是基于data或props中的数据通过计算得到的一个新值，这个新值根据已知值的变化而变化
+<span class="token number">3</span><span class="token punctuation">.</span>在computed属性对象中定义计算属性的方法，和取data对象里的数据属性一样，以属性访问的形式调用
+<span class="token number">4</span><span class="token punctuation">.</span>如果computed属性值是函数，那么默认会走<span class="token keyword">get</span>方法，必须要有一个返回值，函数的返回值就是属性的属性值
+<span class="token number">5</span><span class="token punctuation">.</span>computed属性值会缓存计算结果，在重复的调用中，只要依赖数据不变，直接去缓存中的计算结果，只有依赖数据发生变化，computed才会重新计算
+<span class="token number">6</span><span class="token punctuation">.</span>在computed中的属性都有一个<span class="token keyword">get</span>和<span class="token keyword">set</span>方法，当数据变化时，调用<span class="token keyword">set</span>方法
+
+watch：
+<span class="token number">1</span><span class="token punctuation">.</span>主要用来监听某些特定数据的变化，从而进行某些具体的业务逻辑操作，可以看做是computed和methods的结合体。
+<span class="token number">2</span><span class="token punctuation">.</span>可以监听的数据来源：data  props  computed内的数据
+<span class="token number">3</span><span class="token punctuation">.</span>watch支持异步
+<span class="token number">4</span><span class="token punctuation">.</span>不支持缓存，监听的数据改变，直接会触发相应的操作
+<span class="token number">5</span><span class="token punctuation">.</span>监听函数有两个参数，第一个是最新的值，第二个参数是输入之前的值，顺序是新值，旧值
+</code></pre>
+<h2 id="v-if与v-show区别"><a href="#v-if与v-show区别" class="headerlink" title="v-if与v-show区别"></a>v-if与v-show区别</h2><pre class=" language-js"><code class="language-js">共同点：都能控制元素在页面是否显示
+<span class="token operator">&lt;</span>Model v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"isShow"</span> <span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>Model v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">"isShow"</span> <span class="token operator">/</span><span class="token operator">></span>
+
+区别：
+控制手段不同：v<span class="token operator">-</span>show隐藏是为该元素添加了css<span class="token operator">--</span>display<span class="token punctuation">:</span>none<span class="token punctuation">,</span>dom元素依旧还在。v<span class="token operator">-</span><span class="token keyword">if</span>隐藏是将dom元素整个添加或删除
+
+编辑过程不同：v<span class="token operator">-</span><span class="token keyword">if</span>切换有一个局部编译<span class="token operator">/</span>卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件；v<span class="token operator">-</span>show只是简单的基于css切换
+
+v<span class="token operator">-</span><span class="token keyword">if</span>有更高的切换消耗；v<span class="token operator">-</span>show有更高的初始渲染消耗
+
+使用场景：需要非常频繁地切换，使用v<span class="token operator">-</span>show
+        在运行时条件很少改变，使用v<span class="token operator">-</span><span class="token keyword">if</span>
+</code></pre>
+<h2 id="vue指令"><a href="#vue指令" class="headerlink" title="vue指令"></a>vue指令</h2><pre class=" language-jsp"><code class="language-jsp">1.v-html
+
+  插入一段html片段，相当于innerHTML
+
+  语法：v-html = "vue数据变量"
+
+  注意：会覆盖插值表达式
+
+              设置标签显示的内容  把值当成普通字符串显示
+
+2.v-text
+
+  渲染字符串，会覆盖原先的字符串
+
+  语法: v-text = "vue数据变量"
+
+  注意：会覆盖插值表达式
+
+              设置标签显示的内容  把值当成标签进行解析显示
+
+3.v-show
+
+  控制绑定元素的显示与隐藏，通过css方式
+
+4.v-if
+
+  通过条件，创建或销毁绑定的dom元素
+
+5.v-for
+
+  循环，重复多次渲染绑定的元素 
+
+  语法： v-for = "(item,index)  in  vue变量 "
+
+  注意：可以遍历数组/对象/数组/字符串
+
+  口诀：想要谁循环就放到谁身份
+
+  :key  是给v-for循环生成标签颁发唯一标识的，用于性能的优化
+
+6.v-bind
+
+  将html中属性与vue中变量，进行数据单向绑定，实现数据通信
+
+  语法：v-bind:原生属性名 = "vue变量"
+
+  简写： :原生属性名 = "vue变量"
+
+7.v-on
+
+  用于事件绑定，给标签绑定事件
+
+  语法： v-on:事件名 = "要执行的少量代码"
+
+               v-on:事件名 = "methods中的函数"
+
+               v-on:事件名 = "methods中的函数（实参）"
+
+  简写：@事件名 = "methods中的函数"
+
+8.v-model
+
+  将表单控件的value属性和vue的数据变量进行了双向数据绑定
+
+  数据变化 => 视图自动同步
+
+  视图变化 => 数据自动同步
+
+  语法：v-model = "vue数据变量"
+
+9.自定义指令
+
+  当vue内置指令满足不了需求时，可以自己自定义使用
+
+  9.1 全局注册自定义指令  在main.js中
+
+         Vue.directive("指令名",&#123;
+
+                  inserted(el)&#123;
+
+                           ps: el 哪个标签使用了自定义指令  el就是那个dom元素
+
+                           e.focus()
+
+              &#125;
+
+          &#125;)
+
+  9.2 局部注册自定义指令
+
+         directives:&#123;
+
+                 "指令名字":&#123;
+
+                        inserted(el)&#123;
+
+                            ps: 对el进行操作
+
+                   &#125;
+
+             &#125;
+
+         &#125;
+
+9.3 v-xxx  自定义指令  获取原生dom  自定义操作
+</code></pre>
+<h2 id="vue如何封装一个组件"><a href="#vue如何封装一个组件" class="headerlink" title="vue如何封装一个组件"></a>vue如何封装一个组件</h2><pre class=" language-jsp"><code class="language-jsp">1.首先定义一个后缀为.vue的文件，文件内部由三部分组成，template模板部分，script逻辑部分，style样式部分
+2.这三个部分是组件的核心部分，组件需要哪些结构，在模板部分书写。
+  需要什么样的样式外观，通过style部分书写。
+  有哪些行为在script部分书写，在script部分使用ES6模块化的导出语法进行导出（export default)
+3.在需要调用组件的地方使用es6模块化导入语法即可，组件需要哪些参数，直接在调用的部分进行传递即可
+4.主要逻辑是在组件中完成！
+</code></pre>
+<h2 id="vue的插槽"><a href="#vue的插槽" class="headerlink" title="vue的插槽"></a>vue的插槽</h2><pre class=" language-jsp"><code class="language-jsp">#组件中的标签不确定时，使用插槽
+vue中插槽：匿名插槽，具名插槽，作用域插槽
+
+1.匿名插槽  <slot></slot>
+2.具名插槽  <slot name="名称"></slot>
+3.作用域插槽  <slot :自定义name = data中的属性或对象></slot>
+  可以让组件更加灵活地使用于不同的场景和项目
+
+为什么要使用插槽？
+  我们会通过props传递给组件一些数据让组件进行渲染显示，但是为了让这个组件具有更强的通用性，不能直接将组件的内容固定为div,span这些元素，某些情况下我们是不知道应该使用什么元素的。所以有了插槽，使用插槽不仅可以提高组件的复用性，也可以提高组建的灵活性。
+
+v-slot:  简写为  #
+</code></pre>
+<h2 id="vue修饰符"><a href="#vue修饰符" class="headerlink" title="vue修饰符"></a>vue修饰符</h2><pre class=" language-jsp"><code class="language-jsp">语法： @事件名.修饰符 = "methods里的函数"
+      .stop  阻止事件冒泡
+      .prevent  阻止默认行为
+      .once  程序运行期间，只触发一次事件处理函数
+      
+按键修饰符
+      @keydowm.enter  检测回车按键
+      @keydowm.esc  监测esc按键
+      
+v-model修饰符
+      语法：v-model.修饰符 = "vue数据变量"
+           .number  转为数值类型后再赋予给vue数据变量
+           .trim  去除首尾空白字符
+           .lazy  在change时触发而非Input时
+                  change：监听文本框的内容改变，但是需要失去焦点才触发
+                  input：监听文本框的内容改变
+</code></pre>
+<h2 id="diff算法"><a href="#diff算法" class="headerlink" title="diff算法"></a>diff算法</h2><pre class=" language-jsp"><code class="language-jsp">vue用diff算法，新虚拟dom和旧虚拟dom比较
+
+情况1：根元素变了，删除重建
+情况2：根元素没变，属性改变，元素复用，更新属性
+情况3：根元素未变，子元素/内容改变
+      1.无key - 就地更新
+      2.有key - 按key比较
+      
+diff算法如何比较新旧虚拟dom?  同级比较
+
+是一种通过同层的树节点进行比较的高效算法，避免了对树进行逐层搜索遍历，所以时间复杂度只有O(n).diff算法在很多场景下都有应用，例如在虚拟dom渲染成真实DOM的新旧节点比较更新时，就用到这个算法！
+</code></pre>
+<h2 id="动态class和动态style"><a href="#动态class和动态style" class="headerlink" title="动态class和动态style"></a>动态class和动态style</h2><pre class=" language-jsp"><code class="language-jsp">1.用v-bind给标签class设置动态的值
+  语法：  :class = "&#123;类名:布尔值&#125;"
+  如果布尔值为true，则应用此类名的样式
+  
+使用场景：vue变量控制标签是否应该有此类名
+
+2.给标签动态设置style的值
+  语法：  :style = "&#123;css属性名:值&#125;"
+</code></pre>
+<h2 id="vue过滤器"><a href="#vue过滤器" class="headerlink" title="vue过滤器"></a>vue过滤器</h2><pre class=" language-jsp"><code class="language-jsp">#目的：转换格式，过滤器就是一个函数，传入值返回处理后的值
+
+--- 过滤器只能使用在：插值表达式和v-bind表达式
+
+#语法：全局过滤器：Vue.filter('过滤器名',(值) => &#123;return '返回处理后的值'&#125;)
+#     局部过滤器：filters:&#123;过滤器名字:(值) => &#123;return '返回处理后的值'&#125;&#125;
+
+使用语法：
+    1.插值表达式使用： &#123;&#123;值 | 过滤器名字&#125;&#125;
+    2.属性绑定使用：  v-bind:属性 = "值 | 过滤器名字"
+
+1.在main.js中定义全局过滤器，在任意的.vue文件内“直接”使用、
+// 语法: Vue.filter("过滤器名", 值 => 处理结果)
+
+// 过滤器接参数
+Vue.filter("reverse", (val) => &#123;
+  return val.split("").reverse().join("")
+&#125;)
+#过滤器在执行的时候，会将竖线前边的值，作为第一个参数传递给过滤器函数
+
+2.局部过滤器，只能在当前vue文件内使用，与data是平级的
+  filters: &#123;
+    toUp (val) &#123;
+      return val.toUpperCase()
+    &#125;
+  &#125;
+</code></pre>
+<h2 id="vue组件通信"><a href="#vue组件通信" class="headerlink" title="vue组件通信"></a>vue组件通信</h2><pre class=" language-jsp"><code class="language-jsp">1.父向子
+  1.1 子组件内，props接收传递过来的数据
+  1.2 父组件内，引入子组件，进行注册，使用，在子组件上使用属性绑定进行传输数据
+  
+2.子向父
+  2.1 父组件内使用 @自定义事件名 = "父methods函数"
+  2.2 子组件内使用 this.$emit('自定义事件名',传值)
+  
+3.兄弟组件传值
+  eventbus
+  3.1 发送方 Bus.$emit('自定义事件名'，发送的数据)
+  3.2 接收方 Bus.on('事件名'，data => &#123;
+          对接收到的数据进行操作 data
+      &#125;)
+</code></pre>
+<h2 id="NextTick"><a href="#NextTick" class="headerlink" title="$NextTick"></a>$NextTick</h2><pre class=" language-jsp"><code class="language-jsp">vue在更新DOM时是异步执行的。
+当数据发生变化，vue将开发一个异步更新队列，视图需要等队列中所有数据变化完成之后，再统一进行更新！
+
+$nextTick可以  修改数据后立刻得到更新后的DOM
+</code></pre>
+<h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><pre class=" language-jsp"><code class="language-jsp">1.webpack是模块化管理和打包工具
+</code></pre>
+<h2 id="keep-alive"><a href="#keep-alive" class="headerlink" title="keep-alive"></a>keep-alive</h2><pre class=" language-jsp"><code class="language-jsp">作用：缓存组件
+     避免在切换组件的时候 反复再创建和销毁  增加了性能消耗
+     不会被渲染在dom树中
+生命周期：activated  激活时
+        deactivated
+</code></pre>
+<h2 id="let-const-var区别"><a href="#let-const-var区别" class="headerlink" title="let const var区别"></a>let const var区别</h2><pre class=" language-jsp"><code class="language-jsp">var会挂载window let和const不会挂载
+var存在变量提升  let和const不存在
+let和const存在块级作用域
+let和const同一作用域内不可以声明同名变量，var可以
+</code></pre>
+<h2 id="call-bind-apply区别"><a href="#call-bind-apply区别" class="headerlink" title="call bind apply区别"></a>call bind apply区别</h2><pre class=" language-jsp"><code class="language-jsp">共同点：改变this的指向，在用法上有些区别
+不同的：call和apply是立即执行的，主要区别就是在传递参数上的不同，        call后面传递的参数是以逗号形式分开的，
+       apply后面传递的参数是以数组形式；
+       bind后面返回的是一个函数形式，如果要执行，则后面要再加一个小括号，bind只能以逗号分隔形式
+</code></pre>
+<h2 id="for-in与for-of区别"><a href="#for-in与for-of区别" class="headerlink" title="for in与for of区别"></a>for in与for of区别</h2><pre class=" language-jsp"><code class="language-jsp">在对数组或对象进行遍历的时候，使用这两种方法
+for in遍历的是数组的索引 index
+for of遍历的是数组的元素值 value
+for in更适合遍历对象
+</code></pre>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><pre class=" language-jsp"><code class="language-jsp">每个函数都有一个prototype属性，这个属性指向原型对象、
+使用原型对象的好处就是所有对象实例共享它所包含的属性和方法。
+  访问一个对象的属性时，如果该对象内部不存在这个属性，那么就会沿着它的_proto_属性指向的那个对象里找，知道为null为止，这样一层一层就形成了原型链，主要解决了继承的问题
+</code></pre>
+<h2 id="父子组件生命周期指向顺序"><a href="#父子组件生命周期指向顺序" class="headerlink" title="父子组件生命周期指向顺序"></a>父子组件生命周期指向顺序</h2><pre class=" language-jsp"><code class="language-jsp">父beforecreate - 父created - 子beforecreate -子created -子mounted - 父mounted
+</code></pre>
+<h2 id="vue路由"><a href="#vue路由" class="headerlink" title="vue路由"></a>vue路由</h2><pre class=" language-jsp"><code class="language-jsp">主要通过以下两种技术
+1.利用h5的history api实现
+  主要通过historey.push和history.replace实现
+  push会增加一条新的历史记录，replace会替换当前的历史记录
+2.利用url的hash实现
+  hash主要利用监听哈希值的变化来触发事件
+</code></pre>
+<h2 id="重绘和回流"><a href="#重绘和回流" class="headerlink" title="重绘和回流"></a>重绘和回流</h2><pre class=" language-jsp"><code class="language-jsp">当DOM的修改导致了样式的变化，并且没有影响到集合属性的时候，会导致重绘。
+当DOM元素的修改引发DOM集合尺寸的时候，会发生回流。宽高变化等。
+重绘不一定导致回流，回流一定发生重绘。
+</code></pre>
+<h2 id="事件循环机制"><a href="#事件循环机制" class="headerlink" title="事件循环机制"></a>事件循环机制</h2><pre class=" language-jsp"><code class="language-jsp">  是js的一个底层运行原理，js是单线程的，但是也有一些耗时任务，会影响执行效率。代码都在主线程中执行，当遇见像ajax请求，定时器时候，会单独开启异步线程。
+  异步线程耗时之后会推入异步队列中等待执行，然后当主线程执行完毕后，回到异步队列中取出到主线程中执行。
+  然后再去异步队列中取第二个，这个来回取的过程乐意称之为事件循环。
+</code></pre>
+<h2 id="vue最大特点"><a href="#vue最大特点" class="headerlink" title="vue最大特点"></a>vue最大特点</h2><pre class=" language-jsp"><code class="language-jsp">vue最大特点，我觉得就是“组件化”和“数据驱动”。
+组件化就是可以将页面和页面中可复用的元素都看成组件，写页面的过程就是写组件，然后页面是由这些组件“拼接”起来的组件树。
+数据驱动就是让我们只关注数据层，只要数据变化，页面也就是视图层，会自动更新，数据变了页面自动同步变化。
+</code></pre>
+<h2 id="ES6新特性"><a href="#ES6新特性" class="headerlink" title="ES6新特性"></a>ES6新特性</h2><pre class=" language-jsp"><code class="language-jsp">let const关键字
+extends继承
+箭头函数
+imort export模块化开发
+解构赋值
+模板字符串
+</code></pre>
+<h2 id="css3新特性"><a href="#css3新特性" class="headerlink" title="css3新特性"></a>css3新特性</h2><pre class=" language-jsp"><code class="language-jsp">边框圆角
+盒子阴影
+文本阴影
+动画
+transform 2D和3D转换
+</code></pre>
+<h2 id="项目中可做的优化"><a href="#项目中可做的优化" class="headerlink" title="项目中可做的优化"></a>项目中可做的优化</h2><pre class=" language-jsp"><code class="language-jsp">一些定时器，事件监听要在销毁期声明钩子结束掉
+公共组件的封装
+公共过滤方法的封装
+没有使用的变量要删除
+图片懒加载
+路由懒加载
+第三方库按需引入
+webpack层面的优化：对图片进行压缩
+</code></pre>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/10/03/html/" rel="next" title="html">
+                <i class="fa fa-chevron-left"></i> html
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/10/05/Git/" rel="prev" title="Git">
+                Git <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/zixi.jpg"
+                alt="紫曦" />
+            
+              <p class="site-author-name" itemprop="name">紫曦</p>
+              <p class="site-description motion-element" itemprop="description">coding就是生产力</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/socropio" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="1596436926@qq.com" title="E-Mail" target="_blank">E-Mail</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95"><span class="nav-text">数组遍历方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95"><span class="nav-text">数组操作方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B9%E5%8F%98%E5%8E%9F%E6%95%B0%E7%BB%84"><span class="nav-text">改变原数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E6%94%B9%E5%8F%98%E5%8E%9F%E6%95%B0%E7%BB%84"><span class="nav-text">不改变原数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text">vue的生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#computed%E5%92%8Cwatch%E5%8C%BA%E5%88%AB"><span class="nav-text">computed和watch区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-if%E4%B8%8Ev-show%E5%8C%BA%E5%88%AB"><span class="nav-text">v-if与v-show区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E6%8C%87%E4%BB%A4"><span class="nav-text">vue指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E5%A6%82%E4%BD%95%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AA%E7%BB%84%E4%BB%B6"><span class="nav-text">vue如何封装一个组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E7%9A%84%E6%8F%92%E6%A7%BD"><span class="nav-text">vue的插槽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-text">vue修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#diff%E7%AE%97%E6%B3%95"><span class="nav-text">diff算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81class%E5%92%8C%E5%8A%A8%E6%80%81style"><span class="nav-text">动态class和动态style</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-text">vue过滤器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1"><span class="nav-text">vue组件通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NextTick"><span class="nav-text">$NextTick</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack"><span class="nav-text">webpack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#keep-alive"><span class="nav-text">keep-alive</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#let-const-var%E5%8C%BA%E5%88%AB"><span class="nav-text">let const var区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#call-bind-apply%E5%8C%BA%E5%88%AB"><span class="nav-text">call bind apply区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for-in%E4%B8%8Efor-of%E5%8C%BA%E5%88%AB"><span class="nav-text">for in与for of区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="nav-text">原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%8C%87%E5%90%91%E9%A1%BA%E5%BA%8F"><span class="nav-text">父子组件生命周期指向顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E8%B7%AF%E7%94%B1"><span class="nav-text">vue路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E7%BB%98%E5%92%8C%E5%9B%9E%E6%B5%81"><span class="nav-text">重绘和回流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6"><span class="nav-text">事件循环机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E6%9C%80%E5%A4%A7%E7%89%B9%E7%82%B9"><span class="nav-text">vue最大特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6%E6%96%B0%E7%89%B9%E6%80%A7"><span class="nav-text">ES6新特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css3%E6%96%B0%E7%89%B9%E6%80%A7"><span class="nav-text">css3新特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%8F%AF%E5%81%9A%E7%9A%84%E4%BC%98%E5%8C%96"><span class="nav-text">项目中可做的优化</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-[object Object]"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZiXi</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>

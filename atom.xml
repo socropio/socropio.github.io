@@ -6,7 +6,7 @@
   <link href="https://socropio.github.io/atom.xml" rel="self"/>
   
   <link href="https://socropio.github.io/"/>
-  <updated>2022-10-03T14:44:14.639Z</updated>
+  <updated>2022-10-05T10:21:26.855Z</updated>
   <id>https://socropio.github.io/</id>
   
   <author>
@@ -17,14 +17,69 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Git</title>
+    <link href="https://socropio.github.io/2022/10/05/Git/"/>
+    <id>https://socropio.github.io/2022/10/05/Git/</id>
+    <published>2022-10-05T08:37:34.000Z</published>
+    <updated>2022-10-05T10:21:26.855Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-推送到远程仓库&quot;&gt;&lt;a href=&quot;#1-推送到远程仓库&quot; class=&quot;headerlink&quot; title=&quot;1.推送到远程仓库&quot;&gt;&lt;/a&gt;1.推送到远程仓库&lt;/h2&gt;&lt;p&gt;  git  push  仓库地址  分支名称&lt;/p&gt;
+&lt;h2 id=&quot;2-拉取远程仓库代码&quot;&gt;&lt;a href=&quot;#2-拉取远程仓库代码&quot; class=&quot;headerlink&quot; title=&quot;2.拉取远程仓库代码&quot;&gt;&lt;/a&gt;2.拉取远程仓库代码&lt;/h2&gt;&lt;p&gt;git  pull&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="git" scheme="https://socropio.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记</title>
+    <link href="https://socropio.github.io/2022/10/05/%E7%AC%94%E8%AE%B0/"/>
+    <id>https://socropio.github.io/2022/10/05/%E7%AC%94%E8%AE%B0/</id>
+    <published>2022-10-05T08:35:34.000Z</published>
+    <updated>2022-10-05T16:22:59.243Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;数组遍历方法&quot;&gt;&lt;a href=&quot;#数组遍历方法&quot; class=&quot;headerlink&quot; title=&quot;数组遍历方法&quot;&gt;&lt;/a&gt;数组遍历方法&lt;/h2&gt;&lt;p&gt;1.every()&lt;br&gt;  作用：用于检测数组所有元素是否都符合指定条件&lt;br&gt;  返回值：都符合返回true，否则返回false&lt;/p&gt;
+&lt;p&gt;2.forEach()&lt;br&gt;  作用：调用数组的每个元素，并将元素传递给回调函数&lt;br&gt;  注意：对于空数组不执行回调函数&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>html</title>
     <link href="https://socropio.github.io/2022/10/03/html/"/>
     <id>https://socropio.github.io/2022/10/03/html/</id>
     <published>2022-10-03T14:27:16.000Z</published>
-    <updated>2022-10-03T14:44:14.639Z</updated>
+    <updated>2022-10-03T16:46:07.716Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;网站搭建&quot;&gt;&lt;a href=&quot;#网站搭建&quot; class=&quot;headerlink&quot; title=&quot;网站搭建&quot;&gt;&lt;/a&gt;网站搭建&lt;/h1&gt;&lt;h2 id=&quot;安装的编辑软件&quot;&gt;&lt;a href=&quot;#安装的编辑软件&quot; class=&quot;headerlink&quot; title=&quot;安装的编辑软件&quot;&gt;&lt;/a&gt;安装的编辑软件&lt;/h2&gt;&lt;h3 id=&quot;三级标题&quot;&gt;&lt;a href=&quot;#三级标题&quot; class=&quot;headerlink&quot; title=&quot;三级标题&quot;&gt;&lt;/a&gt;三级标题&lt;/h3&gt;&lt;ul&gt;
+    <summary type="html">&lt;h1 id=&quot;HTML5新特性&quot;&gt;&lt;a href=&quot;#HTML5新特性&quot; class=&quot;headerlink&quot; title=&quot;HTML5新特性&quot;&gt;&lt;/a&gt;HTML5新特性&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;1.html5语义化概念
+  html5语义化指的是合理使用语义化的标签来创建页面结构
+
+2.语义化标签
+  header main footer nav aside
+  
+3.语义化优点
+  代码结构清晰；利于开发与维护
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&quot;css选择器和优先级&quot;&gt;&lt;a href=&quot;#css选择器和优先级&quot; class=&quot;headerlink&quot; title=&quot;css选择器和优先级&quot;&gt;&lt;/a&gt;css选择器和优先级&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;1.css选择器
+  id选择器  类选择器  标签选择器  属性选择器  伪类选择器
+  
+2.优先级
+  !important &amp;gt; 行内样式 &amp;gt; id选择器 &amp;gt; 类选择器（属性选择器|伪类选择器） &amp;gt; 标签选择器 &amp;gt; 通配符选择器 &amp;gt; 继承
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&quot;position属性&quot;&gt;&lt;a href=&quot;#position属性&quot; class=&quot;headerlink&quot; title=&quot;position属性&quot;&gt;&lt;/a&gt;position属性&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;1.相对定位relative
+  不脱离文档流，相对于原来所在的位置进行移动。原来的空间存在。
+  
+2.绝对定位absolute
+  脱离文档流，相对于最近的已定位的父元素进行移动，如果没有已定位的父元素，它的位置相对于body进行移动。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
 &lt;li&gt;横杠加空格是个点&lt;br&gt;个人建议在国内的网站上下载&lt;/li&gt;
 &lt;li&gt;vscode&lt;/li&gt;
 &lt;/ul&gt;</summary>
